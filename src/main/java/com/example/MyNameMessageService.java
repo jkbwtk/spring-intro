@@ -1,9 +1,12 @@
 package com.example;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Component("messageService")
+@Configuration
 public class MyNameMessageService implements MessageService {
+    @Bean("messageService")
+
     @Override
     public String getMessage() {
         return "Jakub Wiątek";

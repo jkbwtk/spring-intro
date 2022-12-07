@@ -1,8 +1,9 @@
 package com.example;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Component("messageServiceRandom")
+@Configuration
 public class RandomTextMessageService implements MessageService {
   private final String[] words = {
       "Spring",
@@ -16,6 +17,8 @@ public class RandomTextMessageService implements MessageService {
       "Git",
       "GitHub",
   };
+
+  @Bean("messageServiceRandom")
 
   @Override
   public String getMessage() {
