@@ -12,6 +12,10 @@ public class MyApp {
         MessageService messageServiceAux = applicationContext.getBean("messageService", MessageService.class);
 
         System.out.println(messageService.getMessage());
+        System.out.println(messageServiceAux.getMessage());
+
+        System.out.println(messageService.hashCode());
+        System.out.println(messageServiceAux.hashCode());
 
         applicationContext.close();
     }
